@@ -1,0 +1,165 @@
+{%  extends 'Upload/home.html' %}
+{% block content %}
+{% load static %}
+
+<br>
+<br>
+<br>
+
+{% for i in parents %}
+{% if i.parentpk == pk %}
+<a href="{% url 'imageDirManager' i.parentpk %}" style="font-size:larger; color:red">{{i.parentName}}</a>
+<i class="ti-angle-left"></i>
+{% else %}
+<a href="{% url 'imageDirManager' i.parentpk %}" style="font-size:larger;">{{i.parentName}}</a>
+<i class="ti-angle-left"></i>
+{% endif %}
+
+{% endfor %}
+&nbsp; &nbsp; &nbsp; &nbsp;
+{% if canEdit %}
+<a href="{% url 'editDirectory' pk %}">
+    <div class="icon-service  bg-info-transparent text-dark rounded-circle">
+        <i class="ti-pencil-alt" dir="ltr"></i>
+    </div>
+</a>
+{% endif %}
+
+<a href="{% url 'addDirectory' pk %}">
+    <div class="icon-service  bg-danger-transparent text-dark rounded-circle">
+        <i class="ti-plus" dir="ltr"></i>
+    </div>
+</a>
+
+{% if canDelete %}
+<a href="{% url 'deleteDirectory' pk %}" aria-disabled="true">
+    <div class="icon-service bg-warning-transparent text-dark rounded-circle">
+        <i class="ti-trash" dir="ltr"></i>
+    </div>
+</a>
+{% endif %}
+
+<hr>
+<div class="row row-sm">
+    <div class="col-lg-3">
+        <ul>
+            {% for i in childs %}
+            <li>
+
+                <a href="{% url 'imageDirManager' i.childtpk %}">
+                    <div class="icon-service  text-warning">
+                        <i class="ti-folder"></i>
+                    </div>
+                </a>
+
+                <a href="{% url 'imageDirManager' i.childtpk %}">{{i.childName}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+
+
+    </div>
+    <div class="col-lg-3 mg-t-20 mg-lg-t-0" style="text-align:center">
+
+    </div>
+    <div class="col-lg-3 mg-t-20 mg-lg-t-0" style="text-align:center">
+        <button type="button" class="btn ripple btn-success mt-3 btn-lg" onclick="selectALLCheckboxes(true)"><i
+                class="zmdi zmdi-collection-plus" dir="ltr"></i> &nbsp;انتخاب همه
+        </button>
+        <br>
+        <button type="button" class="btn ripple btn-light mt-3 btn-lg" onclick="selectALLCheckboxes(false)"><i
+                class="zmdi zmdi-collection-item" dir="ltr"></i> &nbsp;انتخاب هیچ
+        </button>
+        <br>
+    </div>
+
+
+</div>
+<hr>
+<div class="row row-sm">
+    <form method="post">
+        {% csrf_token %}
+        <div style="text-align:center">
+            <button name="copy" class="btn ripple btn-primary btn-lg mt-3"><i class="fa fa-clone" dir="ltr"></i> &nbsp;کپی
+            </button>
+            <button name="cut" class="btn ripple btn-danger mt-3 btn-lg"><i class="ion-ios-cut" dir="ltr"></i> &nbsp;برش
+            </button>
+            <button name="paste" class="btn btn-warning mt-3 btn-lg"><i class="zmdi zmdi-assignment-o" dir="ltr"></i>
+                &nbsp;الصاق
+            </button>
+            <button name="delete" class="btn ripple btn-outline-danger mt-3 btn-lg"><i class="ti-trash" dir="ltr"></i>
+                &nbsp;حذف
+            </button>
+        </div>
+
+        <br>
+
+        <div class="row row-sm">
+            {% for i in images %}
+            <div class="col-sm-6 col-md-6 col-xl-3">
+                <div class="card custom-card">
+                    <div class="card-body user-card text-center" >
+                        {% if i.id in checkedItems %}
+                            <label   class="ckbox"><input type="checkbox" name="id_{{i.id}}"
+                                                    id="id_{{i.id}}" checked><span></span></label>
+                        {% else %}
+                        <label   class="ckbox"><input type="checkbox" name="id_{{i.id}}"
+                                                    id="id_{{i.id}}"><span></span></label>
+                        {% endif %}
+
+
+
+                        <div onclick="FU('id_'+{{i.id}})">
+                            <div class="main-img-user avatar-lg online text-center">
+                            <img class="rounded-0" src="{{ MEDIA_URL }}{{i.pictureAddress}}">
+                        </div>
+                        <div class="mt-2">
+                            <h5 class="mb-1">{{i.width}} در {{i.height}}</h5>
+                            <p class="mb-1 tx-inverse">شماره: {{i.id}}</p>
+                        </div>
+                        </div>
+
+
+<hr>
+                        <a class="btn ripple btn-danger mt-3" href="{% url 'showUploadImage' i.id  %}">نمایش</a>
+
+                        <button type="button" class="btn ripple btn-primary mt-3"
+                                onclick="copyClipboard('{{i.pictureAddress}}')">کپی آدرس
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </form>
+</div>
+
+
+<script src="{% static 'Dashboard/plugins/jquery/jquery.min.js' %}">
+</script>
+<script>
+    function FU(inp) {
+        document.getElementById(inp).checked= !(document.getElementById(inp).checked);
+    }
+
+  function selectALLCheckboxes(inp) {
+  $("*").each(function () {
+             if (this.id.includes("id_")) {
+                    document.getElementById(this.id).checked = inp;
+                }
+        });
+  }
+
+  function copyClipboard(text) {
+    var input = document.createElement('input');
+    input.setAttribute('value', text);
+    document.body.appendChild(input);
+    input.select();
+    var result = document.execCommand('copy');
+    document.body.removeChild(input);
+    return result;
+ }
+
+</script>
+{% endblock %}

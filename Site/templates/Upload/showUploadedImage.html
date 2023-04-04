@@ -1,0 +1,95 @@
+{%  extends 'Upload/home.html' %}
+{% block content %}
+{% load static %}
+
+<br>
+<br>
+<br>
+
+
+<form method="post" id="formName">
+    {% csrf_token %}
+    <div class="row row-sm">
+        <div class="col-lg-12 col-md-12">
+            <div class="card custom-card productdesc">
+                <div class="card-body user-card text-center">
+                    {% if checked %}
+                    <label class="ckbox"><input type="checkbox" name="id_chkcbox" checked
+                                                id="id_chkcbox"
+                                                onchange="document.getElementById('formName').submit()"
+                    ><span></span></label>
+                    {% else %}
+                    <label class="ckbox"><input type="checkbox" name="id_chkcbox"
+                                                id="id_chkcbox"
+                                                onchange="document.getElementById('formName').submit()"
+                    ><span></span></label>
+                    {% endif %}
+                    <a href="{% url 'showUploadImage' prev_address %}">
+                        <div class="icon-service  bg-info-transparent text-dark rounded-circle">
+                            <i class="fa fa-angle-right" style="margin-right:5px" dir="ltr"></i>
+                        </div>
+                    </a>
+                    <a href="{% url 'showUploadImage' next_address %}">
+                        <div class="icon-service  bg-danger-transparent text-dark rounded-circle">
+                            <i class="fa fa-angle-left" style="margin-right:5px" dir="ltr"></i>
+                        </div>
+                    </a>
+                    <h3>{{width}}&nbsp;<span style="color:red">در</span>&nbsp;{{height}}</h3>
+                    <h4>شماره:{{imagePK}}</h4>
+                    <div class="card-body h-100">
+                        <div class="product-carousel">
+                            <div id="carousel" class="carousel slide" data-ride="false">
+                                <div class="text-center mt-4 mb-4 btn-list">
+                                    <button type="button" class="btn ripple btn-primary mt-3"
+                                            onclick="copyClipboard('{{img_address}}')">کپی آدرس
+                                    </button>
+                                    <a href="{% url 'imageDirManager' rootID %}" class="btn ripple btn-danger mt-3">
+                                        بازگشت
+                                    </a>
+                                </div>
+                                <hr style="height:5px">
+                                <div class="carousel-inner" onclick="FU('id_chkcbox')">
+                                    <div class="carousel-item active"><img
+                                            src="{{ MEDIA_URL }}{{img_address}}" alt="img"
+                                            class="img-fluid mx-auto d-block">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</form>
+
+
+<script src="{% static 'Dashboard/plugins/jquery/jquery.min.js' %}">
+</script>
+<script>
+    $(document).ready(function(){
+        $("#formname").on("change", "input:checkbox", function(){
+            $("#formname").submit();
+        });
+    });
+
+    function FU(inp) {
+        document.getElementById(inp).checked= !(document.getElementById(inp).checked);
+        document.getElementById('formName').submit()
+    };
+
+  function copyClipboard(text) {
+    var input = document.createElement('input');
+    input.setAttribute('value', text);
+    document.body.appendChild(input);
+    input.select();
+    var result = document.execCommand('copy');
+    document.body.removeChild(input);
+    return result;
+ };
+
+
+
+
+</script>
+{% endblock %}

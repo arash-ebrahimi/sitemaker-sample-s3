@@ -1,0 +1,100 @@
+{% load static %}
+
+<section class="banner-section-two">
+    <div class="pattern-layer-one" style="background-image: url({% static 'images/main-slider/pattern-4.png' %})"></div>
+    <div class="pattern-layer-two" style="background-image: url({% static 'images/main-slider/pattern-5.png' %})"></div>
+    <div class="pattern-layer-three"
+         style="background-image: url({% static 'images/main-slider/pattern-6.png' %})"></div>
+    <div class="main-slider-carousel owl-carousel owl-theme">
+
+        <div class="slide">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="image">
+                                <img src="{{ MEDIA_URL }}{{c.IMG1}}" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Column -->
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="title">{{c.H1}}</div>
+                            <h1 class="justify">{{c.T1|linebreaks}}</h1>
+                            <div class="text justify">{{c.TXT1|linebreaks}}</div>
+                            {% if c.B1 != '' %}
+                            <a href="{% url c.REF1 %}" class="btn-style-one"><span class="txt"><i
+                                    class="play-icon"></i>{{c.B1}}</span></a>
+                            {%endif%}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="image">
+                                <img src="{{ MEDIA_URL }}{{c.IMG2}}" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Column -->
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="title">{{c.H2}}</div>
+                            <h1 class="justify">{{c.T2|linebreaks}}</h1>
+                            <div class="text justify">{{c.TXT2|linebreaks}}</div>
+                            {% if c.B2 != '' %}
+                            <a href="{% url c.REF2 %}" class="btn-style-one"><span class="txt"><i
+                                    class="play-icon"></i>{{c.B2}}</span></a>
+                            {%endif%}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="slide">
+            <div class="auto-container">
+                <div class="row clearfix">
+
+                    <!-- Image Column -->
+                    <div class="image-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="image">
+                                <img src="{{ MEDIA_URL }}{{c.IMG3}}" alt=""/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Content Column -->
+                    <div class="content-column col-lg-6 col-md-12 col-sm-12">
+                        <div class="inner-column">
+                            <div class="title">{{c.H3}}</div>
+                            <h1 class="justify">{{c.T3|linebreaks}}</h1>
+                            <div class="text justify">{{c.TXT3|linebreaks}}</div>
+                            {% if c.B3 != '' %}
+                            <a href="{% url c.REF3 %}" class="btn-style-one"><span class="txt"><i
+                                    class="play-icon"></i>{{c.B3}}</span></a>
+                            {%endif%}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>

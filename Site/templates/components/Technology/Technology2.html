@@ -1,0 +1,57 @@
+{% load static %}
+
+	<section class="technology-section style-two" style="background-image: url({{ MEDIA_URL }}{{c.BGIMG}})">
+		<div class="pattern-layer-one" style="background-image: url({% static 'images/background/pattern-5.png' %})"></div>
+		<div class="pattern-layer-two" style="background-image: url({% static 'images/background/pattern-6.png' %})"></div>
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title light centered">
+				<div class="title">{{c.H1}}</div>
+				<h2 >{{c.H2}}</h2>
+			</div>
+			<div class="row clearfix" style="justify-content: center;">
+
+				<!-- Technology Block -->
+				<div class="technology-block">
+					<div class="inner-box">
+						<a href="{% url c.REF1 %}" class="overlay-link"></a>
+						<div class="image">
+                                    <a href="{% url c.REF1 %}"><img src="{{ MEDIA_URL }}{{c.IMG1}}" alt=""/></a>
+                                </div>
+						<h6>{{c.Name1}}</h6>
+					</div>
+				</div>
+				<div class="technology-block">
+					<div class="inner-box">
+						<a href="{% url c.REF2 %}" class="overlay-link"></a>
+						<div class="image">
+                                    <a href="{% url c.REF2 %}"><img src="{{ MEDIA_URL }}{{c.IMG2}}" alt=""/></a>
+                                </div>
+						<h6>{{c.Name2}}</h6>
+					</div>
+				</div>
+				<div class="technology-block">
+					<div class="inner-box">
+						<a href="{% url c.REF3 %}" class="overlay-link"></a>
+						<div class="image">
+                                    <a href="{% url c.REF3 %}"><img src="{{ MEDIA_URL }}{{c.IMG3}}" alt=""/></a>
+                                </div>
+						<h6>{{c.Name3}}</h6>
+					</div>
+				</div>
+				<div class="technology-block">
+					<div class="inner-box">
+						<a href="{% url c.REF4 %}" class="overlay-link"></a>
+						<div class="image">
+                                    <a href="{% url c.REF4 %}"><img src="{{ MEDIA_URL }}{{c.IMG4}}" alt=""/></a>
+                                </div>
+						<h6>{{c.Name4}}</h6>
+					</div>
+				</div>
+
+
+				<!-- Technology Block -->
+
+			</div>
+		</div>
+	</section>

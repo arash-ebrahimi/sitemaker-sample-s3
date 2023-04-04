@@ -1,0 +1,44 @@
+<section class="about-section">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title">
+				<div class="title">{{c.c1}}</div>
+				<h2>{{c.c2}}</h2>
+			</div>
+			<div class="row clearfix">
+
+				<!-- Content Column -->
+				<div class="content-column col-lg-12 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<div class="text">{{c.c3}}</div>
+						<div class="blocks-outer">
+
+							<!-- Feature Block -->
+							<div class="feature-block">
+								<div class="inner-box">
+									<div class="icon flaticon-award-1"></div>
+									<h6>{{c.c4|linebreaks}} </h6>
+									<div class="feature-text">{{c.c5}}</div>
+								</div>
+							</div>
+
+							<!-- Feature Block -->
+							{% if c.c6 != '' or c.c7 != '' %}
+							<div class="feature-block">
+								<div class="inner-box">
+									<div class="icon flaticon-technical-support"></div>
+									<h6>{{c.c6}} </h6>
+									<div class="feature-text">{{c.c7}}</div>
+								</div>
+							</div>
+							{% endif %}
+						</div>
+						{% if c.c13 != ''%}
+						<a href="{% url c.c14 %}" class="btn-style-one"><span class="txt"><i class="play-icon"></i>&ensp; {{c.c13}} </span></a>
+						{%endif%}
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>

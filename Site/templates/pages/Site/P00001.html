@@ -1,0 +1,31 @@
+{%  extends 'home.html' %}
+{% block content %}
+{% load static %}
+
+{% include 'components/Header/Header1.html' with c=VAL001 %}
+<br>
+{% include 'components/Title/Title1.html' with c=VAL002 %}
+<hr>
+{% include 'components/Fluid/Fluid2.html' with c=VAL005 %}
+
+{% include 'components/News/News2.html' with c=VAL004 %}
+{% include 'components/Cases/Cases1.html' with c=VAL006 %}
+
+{% include 'components/Technology/Technology2.html' with c=VAL007 %}
+
+{% include 'components/Team/Team2.html' with c=VAL008 %}
+
+{% include 'components/Counter/Counter1.html' with c=VAL011 %}
+
+{% include 'components/Testimonial/Testimonial1.html' with c=VAL009 %}
+
+
+
+{% include 'components/Sponsors/Sponsors2.html' with c=VAL010 %}
+
+
+
+
+
+
+{% endblock %}

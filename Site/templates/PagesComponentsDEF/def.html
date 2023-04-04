@@ -1,0 +1,18 @@
+{%  extends 'PagesComponentsDEF/home.html' %}
+{% block content %}
+{% load static %}
+
+<br>
+<br>
+<div class="d-flex flex-row justify-content-center bg-light mg-b-20">
+    <form method="post">
+        {% csrf_token %}
+        <br>
+        {{ form.as_p }}
+        <div class="btn btn-list">
+            <button type="submit" class="btn ripple btn-primary btn-lg " >ذخیره</button>
+        </div>
+    </form>
+</div>
+
+{% endblock %}

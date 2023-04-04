@@ -1,0 +1,78 @@
+{% load static %}
+
+<section class="news-section-three" style="background-image:
+ url({% static 'images/background/pattern-2.png' %}); background-repeat: no-repeat;
+background-size: 100% 100%; background-repeat: no-repeat; background-position: center;">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title centered">
+				<div class="title">{{c.Header}}</div>
+				<h2>{{c.Title}}</h2>
+			</div>
+			<div class="three-item-carousel owl-carousel owl-theme">
+
+				<!-- News Block Three -->
+				<div class="news-block-three">
+					<div class="inner-box">
+						<div class="lower-content">
+							<a href="{% url c.REF1 %}"><img src="{{ MEDIA_URL }}{{c.IMG1}}" alt="" /></a>
+						</div>
+						<div class="lower-content">
+							<div class="content">
+
+								<h4><a href="{% url c.REF1 %}">{{c.H1}}</a></h4>
+								<div class="text justify">{{c.T1}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="news-block-three">
+					<div class="inner-box">
+						<div class="lower-content">
+							<a href="{% url c.REF2 %}"><img src="{{ MEDIA_URL }}{{c.IMG2}}" alt="" /></a>
+						</div>
+						<div class="lower-content">
+							<div class="content">
+
+								<h4><a href="{% url c.REF2 %}">{{c.H2}}</a></h4>
+								<div class="text justify">{{c.T2}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="news-block-three">
+					<div class="inner-box">
+						<div class="lower-content">
+							<a href="{% url c.REF3 %}"><img src="{{ MEDIA_URL }}{{c.IMG3}}" alt="" /></a>
+						</div>
+						<div class="lower-content">
+							<div class="content">
+
+								<h4><a href="{% url c.REF3 %}">{{c.H3}}</a></h4>
+								<div class="text justify">{{c.T3}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="news-block-three">
+					<div class="inner-box">
+						<div class="lower-content">
+							<a href="{% url c.REF4 %}"><img src="{{ MEDIA_URL }}{{c.IMG4}}" alt="" /></a>
+						</div>
+						<div class="lower-content">
+							<div class="content">
+
+								<h4><a href="{% url c.REF4 %}">{{c.H4}}</a></h4>
+								<div class="text justify">{{c.T4}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+			</div>
+		</div>
+	</section>

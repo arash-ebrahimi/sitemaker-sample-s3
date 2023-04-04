@@ -1,0 +1,45 @@
+{% load static %}
+
+<section class="process-section">
+		<div class="pattern-layer-one" style="background-image: url({{ MEDIA_URL }}{{c.IMG1}})"></div>
+		<div class="pattern-layer-two" style="background-image: url({{ MEDIA_URL }}{{c.IMG2}})"></div>
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title centered">
+				<div class="title">{{c.Title1}} </div>
+				<h2 >{{c.Title2|linebreaks}}</h2>
+			</div>
+			<div class="row clearfix">
+
+				<!-- Process Block -->
+				<div class="process-block col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="number-box">{{c.S1}}</div>
+						<h4><a href="services-detail.html">{{c.H1}}</a></h4>
+						<div class="text justify">{{c.T1|linebreaks}}</div>
+						<a class="read-more" href="{% url c.REF1 %}"><span class="arrow flaticon-long-arrow-pointing-to-the-right"></span>{{c.B1}} </a>
+					</div>
+				</div>
+
+				<div class="process-block col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="number-box">{{c.S2}}</div>
+						<h4><a href="services-detail.html">{{c.H2}}</a></h4>
+						<div class="text justify">{{c.T2|linebreaks}}</div>
+						<a class="read-more" href="{% url c.REF2 %}"><span class="arrow flaticon-long-arrow-pointing-to-the-right"></span>{{c.B2}} </a>
+					</div>
+				</div>
+
+				<div class="process-block col-lg-4 col-md-6 col-sm-12">
+					<div class="inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+						<div class="number-box">{{c.S3}}</div>
+						<h4><a href="services-detail.html">{{c.H3}}</a></h4>
+						<div class="text justify">{{c.T3|linebreaks}}</div>
+						<a class="read-more" href="{% url c.REF3 %}"><span class="arrow flaticon-long-arrow-pointing-to-the-right"></span>{{c.B3}} </a>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>

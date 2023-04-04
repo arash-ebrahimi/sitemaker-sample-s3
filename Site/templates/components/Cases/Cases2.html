@@ -1,0 +1,101 @@
+{% load static %}
+
+<section class="cases-section-two">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title">
+				<div class="title">{{c.h1}}</div>
+				<h2>{{c.h2}}</h2>
+			</div>
+		</div>
+
+		<div class="outer-container">
+
+			<div class="five-item-carousel owl-carousel owl-theme">
+
+				<!-- Case Block Two -->
+				<div class="case-block-two">
+					<div class="inner-box">
+						<div class="image">
+							<img src="{{ MEDIA_URL }}{{c.c1_IMG}}" alt="" />
+							<div class="overlay-box">
+								<a href="{{ MEDIA_URL }}{{c.c1_IMG}}" data-fancybox="case-2" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+								<a href="{% url c.c1_REF %}" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<h5><a href="{% url c.c1_REF %}">{{c.c1_1}}</a></h5>
+							<div class="category">{{c.c1_2}}</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="case-block-two">
+					<div class="inner-box">
+						<div class="image">
+							<img src="{{ MEDIA_URL }}{{c.c2_IMG}}" alt="" />
+							<div class="overlay-box">
+								<a href="{{ MEDIA_URL }}{{c.c2_IMG}}" data-fancybox="case-2" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+								<a href="{% url c.c2_REF %}" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<h5><a href="{% url c.c2_REF %}">{{c.c2_1}}</a></h5>
+							<div class="category">{{c.c2_2}}</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="case-block-two">
+					<div class="inner-box">
+						<div class="image">
+							<img src="{{ MEDIA_URL }}{{c.c3_IMG}}" alt="" />
+							<div class="overlay-box">
+								<a href="{{ MEDIA_URL }}{{c.c3_IMG}}" data-fancybox="case-2" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+								<a href="{% url c.c3_REF %}" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<h5><a href="{% url c.c3_REF %}">{{c.c3_1}}</a></h5>
+							<div class="category">{{c.c3_2}}</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="case-block-two">
+					<div class="inner-box">
+						<div class="image">
+							<img src="{{ MEDIA_URL }}{{c.c4_IMG}}" alt="" />
+							<div class="overlay-box">
+								<a href="{{ MEDIA_URL }}{{c.c4_IMG}}" data-fancybox="case-2" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+								<a href="{% url c.c4_REF %}" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<h5><a href="{% url c.c4_REF %}">{{c.c4_1}}</a></h5>
+							<div class="category">{{c.c4_2}}</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="case-block-two">
+					<div class="inner-box">
+						<div class="image">
+							<img src="{{ MEDIA_URL }}{{c.c5_IMG}}" alt="" />
+							<div class="overlay-box">
+								<a href="{{ MEDIA_URL }}{{c.c5_IMG}}" data-fancybox="case-2" data-caption="" class="search-icon"><span class="icon flaticon-search"></span></a>
+								<a href="{% url c.c5_REF %}" class="arrow flaticon-long-arrow-pointing-to-the-right"></a>
+							</div>
+						</div>
+						<div class="lower-content">
+							<h5><a href="{% url c.c5_REF %}">{{c.c5_1}}</a></h5>
+							<div class="category">{{c.c5_2}}</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</section>

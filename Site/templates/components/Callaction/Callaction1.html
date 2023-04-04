@@ -1,0 +1,21 @@
+
+<section class="call-to-action-section" style="background-image: url({{ MEDIA_URL }}{{c.c3}})">
+		<div class="auto-container">
+			<div class="row clearfix">
+				<!-- Heading Column -->
+				<div class="heading-column col-lg-8 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<h2>{{c.c1|linebreaks}}</h2>
+					</div>
+				</div>
+				<!-- Button Column -->
+				{% if c.c2 != '' %}
+				<div class="button-column col-lg-4 col-md-12 col-sm-12">
+					<div class="inner-column">
+						<a href="{% url c.c4 %}" class="theme-btn btn-style-two"><span class="txt">{{c.c2}}</span></a>
+					</div>
+				</div>
+				{% endif %}
+			</div>
+		</div>
+	</section>

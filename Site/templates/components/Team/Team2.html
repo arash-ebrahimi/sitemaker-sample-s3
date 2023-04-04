@@ -1,0 +1,91 @@
+{% load static %}
+<section class="team-section-two" style="background-image: url({% static 'images/background/2.jpg' %})">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title">
+				<div class="clearfix">
+					<div class="pull-left">
+						<div class="title">{{c.H1}}</div>
+						<h2 class="justify">{{c.H2|linebreaks}}</h2>
+					</div>
+					<div class="pull-right">
+						<div class="text justify">{{c.TEXT1|linebreaks}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+
+				<!-- Team Block -->
+				<div class="team-block-two col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="image">
+							<a href="{% url c.TEAM %}"><img src="{{ MEDIA_URL }}{{c.IMG1}}" alt="" /></a>
+						</div>
+						<div class="lower-box">
+							<!-- Social Box -->
+							<ul class="social-box">
+
+							</ul>
+							<div class="content">
+								<h5><a href="{% url c.TEAM %}">{{c.Name1}}</a></h5>
+								<div class="designation">{{c.Title1}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="team-block-two col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="image">
+							<a href="{% url c.TEAM %}"><img src="{{ MEDIA_URL }}{{c.IMG2}}" alt="" /></a>
+						</div>
+						<div class="lower-box">
+							<!-- Social Box -->
+							<ul class="social-box">
+
+							</ul>
+							<div class="content">
+								<h5><a href="{% url c.TEAM %}">{{c.Name2}}</a></h5>
+								<div class="designation">{{c.Title2}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="team-block-two col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="image">
+							<a href="{% url c.TEAM %}"><img src="{{ MEDIA_URL }}{{c.IMG3}}" alt="" /></a>
+						</div>
+						<div class="lower-box">
+							<!-- Social Box -->
+							<ul class="social-box">
+
+							</ul>
+							<div class="content">
+								<h5><a href="{% url c.TEAM %}">{{c.Name3}}</a></h5>
+								<div class="designation">{{c.Title3}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="team-block-two col-lg-3 col-md-6 col-sm-12">
+					<div class="inner-box">
+						<div class="image">
+							<a href="{% url c.TEAM %}"><img src="{{ MEDIA_URL }}{{c.IMG4}}" alt="" /></a>
+						</div>
+						<div class="lower-box">
+							<!-- Social Box -->
+							<ul class="social-box">
+
+							</ul>
+							<div class="content">
+								<h5><a href="{% url c.TEAM %}">{{c.Name4}}</a></h5>
+								<div class="designation">{{c.Title4}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</div>
+	</section>

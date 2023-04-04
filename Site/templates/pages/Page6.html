@@ -1,0 +1,24 @@
+{%  extends 'home.html' %}
+{% block content %}
+{% load static %}
+
+
+{% include 'components/Shop/Shop1.html' with c=VAL006 %}
+{% include 'components/Shop/Shop2.html' with c=VAL007 %}
+{% include 'components/Shop/Shop3.html' with c=VAL008 %}
+{% include 'components/Pricing/Pricing1.html' with c=VAL001 %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% include 'components/Services/Services3.html' with c=VAL005 %}
+{% include 'components/Process/Process1.html' with c=VAL002 %}
+
+
+
+
+
+
+{% endblock %}

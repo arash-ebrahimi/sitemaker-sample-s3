@@ -1,0 +1,93 @@
+{% load static %}
+
+<section class="about-section-two" style="background-image: url({{ MEDIA_URL }}{{c.c13}})">
+    <div class="auto-container">
+        <div class="row clearfix">
+
+            <!-- Image Column -->
+            <div class="image-column col-lg-7 col-md-12 col-sm-12">
+                <div class="inner-column">
+                    <div class="circle-layer" style="background-image: url({{ MEDIA_URL }}{{c.c12}})">
+
+                    </div>
+                    <div class="image" style="margin-left:{{c.c14}}px; marging-top:{{c.c15}}px height:{{c.c16}}px">
+                        <img  src="{{ MEDIA_URL }}{{c.c11}}" alt=""/>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Skill Column -->
+            <div class="skill-column col-lg-5 col-md-12 col-sm-12">
+                <div class="inner-column">
+
+                    <!-- Sec Title -->
+                    <div class="sec-title light">
+                        <div class="title">{{c.c1}}</div>
+                        <h2>{{c.c2}}</h2>
+                        <div class="text">{{c.c3}}</div>
+                    </div>
+
+                    <!-- Skills -->
+                    <div class="skills">
+
+                        <!-- Skill Item -->
+                        <div class="skill-item">
+                            <div class="skill-header clearfix">
+                                <div class="skill-title">{{c.c4}}</div>
+                                <div class="skill-percentage">
+                                    <div class="count-box"><span class="count-text" data-speed="2000"
+                                                                 data-stop={{c.c7}}>0</span>%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-width={{c.c7_from100}}></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skill Item -->
+                        <div class="skill-item">
+                            <div class="skill-header clearfix">
+                                <div class="skill-title">{{c.c5}}</div>
+                                <div class="skill-percentage">
+                                    <div class="count-box"><span class="count-text" data-speed="2000"
+                                                                 data-stop={{c.c8}}>0</span>%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-width={{c.c8_from100}}></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Skill Item -->
+                        <div class="skill-item">
+                            <div class="skill-header clearfix">
+                                <div class="skill-title">{{c.c6}}</div>
+                                <div class="skill-percentage">
+                                    <div class="count-box"><span class="count-text" data-speed="2000"
+                                                                 data-stop={{c.c9}}>0</span>%
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="bar-inner">
+                                    <div class="bar progress-line" data-width={{c.c9_from100}}></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a href="{% url c.c17 %}" class="theme-btn btn-style-two"><span class="txt">{{c.c10}}</span></a>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>

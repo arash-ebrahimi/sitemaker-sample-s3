@@ -1,0 +1,30 @@
+{%  extends 'Upload/home.html' %}
+{% block content %}
+{% load static %}
+<br>
+<br>
+<br>
+
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+
+        <p class="mg-b-10">پوشه <span style="color:red">{{name}}</span> به پوشه:</p>
+        <input type="text" class="form-control" id="editdirectory" name="editdirectory" placeholder="نام پوشه جدید">
+        <p></p>
+        <p class="mg-b-10">  تغییر خواهد کرد.</p>
+    </div>
+    <div style="text-align:center">
+        <button name="update" class="btn ripple btn-primary mt-3">تغییر</button>
+        <button name="cancel" class="btn ripple btn-danger mt-3">انصراف</button>
+    </div>
+</form>
+<script>
+    var input = document.getElementById("editdirectory");
+    input.focus();
+
+</script>
+
+{% endblock %}

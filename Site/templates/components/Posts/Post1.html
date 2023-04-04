@@ -1,0 +1,57 @@
+{% load static %}
+<section class="sponsors-section style-three"
+         style="background-image:
+ url({{ MEDIA_URL }}{{c.BG_IMG}}); background-repeat: no-repeat;
+background-size: 100% 100%; background-repeat: no-repeat; background-position: center;"
+>
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <div class="title">{{c.H1}}</div>
+            <h2>{{c.H2}}</h2>
+
+            <div class="pull-right">
+                <h4 class="justify">{{c.Title|linebreaks}}</h4>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+<div class="auto-container">
+    <div class="sec-title centered">
+        <div class="image">
+            <img src="{{ MEDIA_URL }}{{c.IMG}}" alt=""/>
+        </div>
+    </div>
+</div>
+
+<br>
+
+
+{% for i in c.Items %}
+{% if i.Value.Header != '' or i.Value.Text != '' %}
+<div class="auto-container">
+    <div class="sec-title">
+        <div class="clearfix">
+            <div class="pull-left">
+                <div class="title" style="color:red; font-size:160%;">{{i.Value.Header}}</div>
+            </div>
+            <br>
+            <div class="pull-left">
+                <h5 class="justify">{{i.Value.Text|linebreaks}}</h5>
+            </div>
+            <div class="sec-title centered">
+                <div class="image">
+                    <img src="{{ MEDIA_URL }}{{i.Value.IMG}}" alt=""/>
+                </div>
+                {% if i.Value.REFTEXT != '' %}
+                <a style="margin-top:20px;" href={{i.Value.REFTEXT_REF}} class="theme-btn btn-style-one">
+                    <span class="txt">{{i.Value.REFTEXT}}</span>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+{% endfor %}

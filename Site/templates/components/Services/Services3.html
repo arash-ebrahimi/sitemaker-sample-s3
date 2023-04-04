@@ -1,0 +1,45 @@
+{% load static %}
+<section class="services-section-three margin-top">
+		<div class="auto-container">
+			<div class="sec-title light centered">
+				<div class="row clearfix">
+
+					<!-- Service Block Three -->
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="content">
+								<div class="service-number">{{c.N1}}</div>
+								<h4><a href="{% url c.REF1 %}">{{c.H1}}</a></h4>
+								<div class="text justify">{{c.T1|linebreaks}}</div>
+								<a href="{% url c.REF1 %}" class="more-detail">{{c.B1}}</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="content">
+								<div class="service-number">{{c.N2}}</div>
+								<h4><a href="{% url c.REF1 %}">{{c.H2}}</a></h4>
+								<div class="text justify">{{c.T2|linebreaks}}</div>
+								<a href="{% url c.REF2 %}" class="more-detail">{{c.B2}}</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="service-block-three col-lg-4 col-md-6 col-sm-12">
+						<div class="inner-box">
+							<div class="content">
+								<div class="service-number">{{c.N3}}</div>
+								<h4><a href="{% url c.REF1 %}">{{c.H3}}</a></h4>
+								<div class="text justify">{{c.T3|linebreaks}}</div>
+								<a href="{% url c.REF3 %}" class="more-detail">{{c.B3}}</a>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</section>

@@ -1,0 +1,70 @@
+{% load static %}
+<section class="services-section-two margin-top">
+    <div class="auto-container">
+        <div class="upper-box">
+            <div class="icon-one" style="background-image: url({{ MEDIA_URL }}{{c.PATTERN1}})"></div>
+            <div class="icon-two" style="background-image: url({{ MEDIA_URL }}{{c.PATTERN2}})"></div>
+            <div class="icon-three" style="background-image: url({{ MEDIA_URL }}{{c.PATTERN3}})"></div>
+            <!-- Sec Title -->
+            <div class="sec-title light centered">
+                <div class="title">{{c.Title1}}</div>
+                <h2>{{c.Title2}}</h2>
+            </div>
+        </div>
+        <div class="inner-container">
+            <div class="row clearfix">
+
+                <!-- Service Block Two -->
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="shape-one"></div>
+                        <div class="shape-two"></div>
+                        <div class="image">
+                            <a href="{% url c.REF1 %}"><img src="{{ MEDIA_URL }}{{c.IMG1}}" alt=""/></a>
+                        </div>
+                        <h5><a href="{% url c.REF1 %}">{{c.H1}}</a></h5>
+                        <div class="text justify">{{c.T1|linebreaks}}</div>
+                    </div>
+                </div>
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="shape-one"></div>
+                        <div class="shape-two"></div>
+                        <div class="image">
+                            <a href="{% url c.REF2 %}"><img width="65px" src="{{ MEDIA_URL }}{{c.IMG2}}" alt=""/></a>
+                        </div>
+                        <h5><a href="{% url c.REF2 %}">{{c.H2}}</a></h5>
+                        <div class="text justify">{{c.T2|linebreaks}}</div>
+                    </div>
+                </div>
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="shape-one"></div>
+                        <div class="shape-two"></div>
+                        <div class="image">
+                            <a href="{% url c.REF3 %}"><img src="{{ MEDIA_URL }}{{c.IMG3}}" alt=""/></a>
+                        </div>
+                        <h5><a href="{% url c.REF3 %}">{{c.H3}}</a></h5>
+                        <div class="text justify">{{c.T3|linebreaks}}</div>
+                    </div>
+                </div>
+                <div class="service-block-two col-lg-4 col-md-6 col-sm-12">
+                    <div class="inner-box">
+                        <div class="shape-one"></div>
+                        <div class="shape-two"></div>
+                        <div class="image">
+                            <a href="{% url c.REF4 %}"><img src="{{ MEDIA_URL }}{{c.IMG4}}" alt=""/></a>
+                        </div>
+                        <h5><a href="{% url c.REF4 %}">{{c.H4}}</a></h5>
+                        <div class="text justify">{{c.T4|linebreaks}}</div>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</section>

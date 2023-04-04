@@ -1,0 +1,95 @@
+{% load static %}
+<div class="sidebar-page-container">
+    	<div class="auto-container">
+        	<div class="row clearfix">
+
+				<!-- Sidebar Side -->
+                <div class="sidebar-side left-sidebar col-lg-4 col-md-12 col-sm-12">
+                	<aside class="sidebar sticky-top">
+
+						<!-- Services -->
+                        <div class="sidebar-widget">
+                            <ul class="service-list">
+								{% if c.Item1_SEL == '-' %}
+								 <li class="current" ><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_1}}</a></li>
+								{% else %}
+								 <li><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_1}}</a></li>
+								{% endif %}
+
+								{% if c.Item2_SEL == '-' %}
+								 <li class="current" ><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_2}}</a></li>
+								{% else %}
+								 <li><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_2}}</a></li>
+								{% endif %}
+
+								{% if c.Item3_SEL == '-' %}
+								 <li class="current" ><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_3}}</a></li>
+								{% else %}
+								 <li><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_3}}</a></li>
+								{% endif %}
+
+								{% if c.Item4_SEL == '-' %}
+								 <li class="current" ><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_4}}</a></li>
+								{% else %}
+								 <li><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_4}}</a></li>
+								{% endif %}
+
+								{% if c.Item5_SEL == '-' %}
+								 <li class="current" ><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_5}}</a></li>
+								{% else %}
+								 <li><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_5}}</a></li>
+								{% endif %}
+
+								{% if c.Item6_SEL == '-' %}
+								 <li class="current" ><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_6}}</a></li>
+								{% else %}
+								 <li><a href="{% url c.Item1_REF %}"><span class="arrow fa fa-angle-double-right"></span> {{c.Item_6}}</a></li>
+								{% endif %}
+
+                            </ul>
+                        </div>
+
+						<!-- Contact Widget -->
+						<div class="sidebar-widget contact-widget">
+							<div class="widget-content">
+								<div class="border-layer"></div>
+								<div class="icon-box {{c.iconmain}}"></div>
+								<h4>{{c.help_1}}</h4>
+								<div class="text justify">{{c.help_2|linebreaks}}</div>
+								<ul>
+									<li><span class="icon fa fa-check"></span>{{c.help_3}}</li>
+									<li><span class="icon fa fa-check"></span>{{c.help_4}}</li>
+								</ul>
+							</div>
+						</div>
+
+					</aside>
+				</div>
+
+				<!-- Content Side -->
+                <div class="content-side right-sidebar col-lg-8 col-md-12 col-sm-12">
+                	<div class="services-detail">
+						<div class="inner-box">
+							<h2>{{c.h1}}</h2>
+							<div class="image">
+								<img src="{{ MEDIA_URL }}{{c.IMG1}}" alt="" />
+							</div>
+							<h3>{{c.T_1}}</h3>
+							<h6 class="justify">{{c.TX_1|linebreaks}}</h6>
+							<h3>{{c.T_2}}</h3>
+							<h6 class="justify">{{c.TX_2|linebreaks}}</h6>
+							<div class="image-two">
+								<img src="{{ MEDIA_URL }}{{c.IMG2}}" alt="" />
+
+								<div class="play-box">
+<!--									<a href="#" class="video-box"><span class="fa fa-play"><i class="ripple"></i></span></a>-->
+								</div>
+							</div>
+							<h3>{{c.T_3}}</h3>
+							<h6 class="justify">{{c.TX_3|linebreaks}}</h6>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

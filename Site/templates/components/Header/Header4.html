@@ -1,0 +1,42 @@
+ <section class="banner-section-four">
+        <div class="banner-carousel owl-carousel owl-theme">
+            <!-- Slide Item -->
+            <div class="slide-item" style="background-image: url({{ MEDIA_URL }}{{c.IMG1}})">
+                <div class="auto-container">
+                    <div class="content-box">
+                        <span class="title">{{c.H1}} </span>
+                        <h2>{{c.T1|linebreaks}}</h2>
+                        {% if c.B1 != '' %}
+                        <a href="{% url c.REF1 %}" class="btn-style-one"><span class="txt"><i class="play-icon"></i>&ensp; {{c.B1}} </span></a>
+                        {%endif%}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Item -->
+            <div class="slide-item" style="background-image: url({{ MEDIA_URL }}{{c.IMG2}})">
+                <div class="auto-container">
+                    <div class="content-box">
+                        <span class="title">{{c.H2}} </span>
+                        <h2>{{c.T2|linebreaks}}</h2>
+                        {% if c.B2 != '' %}
+                        <a href="{% url c.REF2 %}" class="btn-style-one"><span class="txt"><i class="play-icon"></i>&ensp; {{c.B2}} </span></a>
+                        {%endif%}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide Item -->
+            <div class="slide-item" style="background-image: url({{ MEDIA_URL }}{{c.IMG3}})">
+                <div class="auto-container">
+                    <div class="content-box">
+                        <span class="title">{{c.H3}} </span>
+                        <h2>{{c.T3|linebreaks}}</h2>
+                        {% if c.B3 != '' %}
+                        <a href="{% url c.REF3 %}" class="btn-style-one"><span class="txt"><i class="play-icon"></i>&ensp; {{c.B3}} </span></a>
+                        {%endif%}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

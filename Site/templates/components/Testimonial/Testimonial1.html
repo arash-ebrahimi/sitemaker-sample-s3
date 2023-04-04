@@ -1,0 +1,57 @@
+{% load static %}
+
+<section class="testimonial-section"
+style="background-image: url({% static 'images/background/pattern-9.png' %}); background-repeat: no-repeat;
+ background-repeat: no-repeat; background-position: center;"
+
+>
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title">
+				<div class="clearfix">
+					<div class="pull-left">
+						<div class="title">{{c.H1}}</div>
+						<h2>{{c.H2}}</h2>
+					</div>
+					<div class="pull-right">
+						<div class="text justify">{{c.Title1|linebreaks}}</div>
+					</div>
+				</div>
+			</div>
+			<div class="testimonial-carousel owl-carousel owl-theme">
+
+				<!-- Testimonial Block -->
+				<div class="testimonial-block">
+					<div class="inner-box" style="background-image: url({% static 'images/background/pattern-4.png' %})">
+						<div class="upper-box">
+							<div class="image">
+                                    <a href="{% url c.REF1 %}"><img src="{{ MEDIA_URL }}{{c.IMG1}}" alt=""/></a>
+                            </div>
+							<h4>{{c.Name1}} </h4>
+							<div class="designation">{{c.T1}}</div>
+						</div>
+						<div class="justify text">{{c.TEXT1|linebreaks}}</div>
+					</div>
+				</div>
+				<div class="testimonial-block">
+					<div class="inner-box" style="background-image: url({% static 'images/background/pattern-4.png' %})">
+						<div class="upper-box">
+							<div class="image">
+                                    <a href="{% url c.REF2 %}"><img src="{{ MEDIA_URL }}{{c.IMG2}}" alt=""/></a>
+                            </div>
+							<h4>{{c.Name2}} </h4>
+							<div class="designation">{{c.T2}}</div>
+						</div>
+						<div class="justify text">{{c.TEXT2|linebreaks}}</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+
+			<div class="lower-text">{{c.FinalText}} <a href="{{c.REFMAIN}}">{{c.REFTEXT}}</a></div>
+
+		</div>
+	</section>

@@ -1,0 +1,41 @@
+{% load static %}
+
+<section class="shop-single-section">
+    <div class="auto-container">
+
+        <!--Shop Single-->
+        <div class="shop-page product-details">
+
+            <!--Basic Details-->
+            <div class="basic-details">
+                <div class="row clearfix">
+
+                    <div class="image-column col-lg-7 col-md-12 col-sm-12">
+                        <ul class="image-carousel owl-carousel owl-theme">
+                            <li><a href="{{ MEDIA_URL }}{{c.IMG1}}" class="lightbox-image"><img
+                                    src="{{ MEDIA_URL }}{{c.IMG1}}" alt=""></a></li>
+                            <li><a href="{{ MEDIA_URL }}{{c.IMG2}}" class="lightbox-image"><img
+                                    src="{{ MEDIA_URL }}{{c.IMG2}}" alt=""></a></li>
+                            <li><a href="{{ MEDIA_URL }}{{c.IMG3}}" class="lightbox-image"><img
+                                    src="{{ MEDIA_URL }}{{c.IMG3}}" alt=""></a></li>
+                            <li><a href="{{ MEDIA_URL }}{{c.IMG4}}" class="lightbox-image"><img
+                                    src="{{ MEDIA_URL }}{{c.IMG4}}" alt=""></a></li>
+                        </ul>
+                        <ul class="thumbs-carousel owl-carousel owl-theme">
+                            <li><img src="{{ MEDIA_URL }}{{c.IMG1}}" alt=""></li>
+                            <li><img src="{{ MEDIA_URL }}{{c.IMG2}}" alt=""></li>
+                            <li><img src="{{ MEDIA_URL }}{{c.IMG3}}" alt=""></li>
+                            <li><img src="{{ MEDIA_URL }}{{c.IMG4}}" alt=""></li>
+                        </ul>
+                    </div>
+
+                    <!--Info Column-->
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>

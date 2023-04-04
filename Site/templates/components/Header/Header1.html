@@ -1,0 +1,75 @@
+{% load static %}
+
+<section class="banner-section">
+		<div class="main-slider-carousel owl-carousel owl-theme" >
+
+			<div class="slide" style="background-image: url({{ MEDIA_URL }}{{c.IMG1}});
+background-size: 100% 100%; background-repeat: no-repeat; background-position: center;">
+				<div class="patern-layer-one" style="background-image: url({% static 'images/main-slider/pattern-1.png' %})"></div>
+				<div class="patern-layer-two" style="background-image: url({% static 'images/main-slider/pattern-2.png' %})"></div>
+				<div class="auto-container">
+
+					<!-- Content Column -->
+					<div class="content-column">
+						<div class="inner-column">
+							<div class="patern-layer-three" style="background-image: url({% static 'images/main-slider/pattern-3.png' %})"></div>
+							<div class="title">{{c.H1}} </div>
+							<h1 class="justify">{{c.T1|linebreaks}}</h1>
+							<div class="text justify">{{c.TXT1|linebreaks}}</div>
+							<div class="btns-box">
+								<a href="{% url c.REF1 %}" class="theme-btn btn-style-one"><span class="txt">{{c.B1}}</span></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="slide" style="background-image: url({{ MEDIA_URL }}{{c.IMG2}});
+background-size: 100% 100%; background-repeat: no-repeat; background-position: center;">
+				<div class="patern-layer-one" style="background-image: url({% static 'images/main-slider/pattern-1.png' %})"></div>
+				<div class="patern-layer-two" style="background-image: url({% static 'images/main-slider/pattern-2.png' %})"></div>
+				<div class="auto-container">
+
+					<!-- Content Column -->
+					<div class="content-column">
+						<div class="inner-column">
+							<div class="patern-layer-three" style="background-image: url({% static 'images/main-slider/pattern-3.png' %})"></div>
+							<div class="title">{{c.H2}} </div>
+							<h1 class="justify">{{c.T2|linebreaks}}</h1>
+							<div class="text justify">{{c.TXT2|linebreaks}}</div>
+							<div class="btns-box">
+								<a href="{% url c.REF2 %}" class="theme-btn btn-style-one"><span class="txt">{{c.B2}}</span></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="slide" style="background-image: url({{ MEDIA_URL }}{{c.IMG3}});
+background-size: 100% 100%; background-repeat: no-repeat; background-position: center;">
+				<div class="patern-layer-one" style="background-image: url({% static 'images/main-slider/pattern-1.png' %})"></div>
+				<div class="patern-layer-two" style="background-image: url({% static 'images/main-slider/pattern-2.png' %})"></div>
+				<div class="auto-container">
+
+					<!-- Content Column -->
+					<div class="content-column">
+						<div class="inner-column">
+							<div class="patern-layer-three" style="background-image: url({% static 'images/main-slider/pattern-3.png' %})"></div>
+							<div class="title">{{c.H3}} </div>
+							<h1 class="justify">{{c.T3|linebreaks}}</h1>
+							<div class="text justify">{{c.TXT3|linebreaks}}</div>
+							<div class="btns-box">
+								<a href="{% url c.REF3 %}" class="theme-btn btn-style-one"><span class="txt">{{c.B3}}</span></a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+		</div>
+
+	</section>
+

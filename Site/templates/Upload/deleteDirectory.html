@@ -1,0 +1,24 @@
+{%  extends 'Upload/home.html' %}
+{% block content %}
+{% load static %}
+<br>
+<br>
+<br>
+
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+        <p class="mg-b-10">پوشه </p>
+        <h1 class="mg-b-10" style="color:red"> {{name}}</h1>
+        <h3 class="mg-b-10">حذف خواهد شد!</h3>
+    </div>
+    <div style="text-align:center">
+        <button name="delete" class="btn ripple btn-primary mt-3">حذف شود</button>
+        <button name="cancel" class="btn ripple btn-danger mt-3">انصراف</button>
+    </div>
+</form>
+
+
+{% endblock %}

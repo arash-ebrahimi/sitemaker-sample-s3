@@ -1,0 +1,89 @@
+{% load static %}
+
+<section class="experiance-section" style="background-image: url({% static 'images/background/pattern-9.png' %})">
+		<div class="auto-container">
+			<!-- Sec Title -->
+			<div class="sec-title centered">
+				<div class="title">{{c.h1}}</div>
+				<h2>{{c.h2}}</h2>
+			</div>
+
+
+			<!-- Experiance Info Tabs -->
+			<div class="experiance-info-tabs">
+				<!-- Experiance Tabs -->
+				<div class="experiance-tabs tabs-box">
+
+					<!-- Tab Btns-->
+					<ul class="tab-btns tab-buttons clearfix">
+						<li data-tab="#1" class="tab-btn"><h5>{{c.H1}}</h5><br>{{c.Item1}}</li>
+						<li data-tab="#2" class="tab-btn"><h5>{{c.H2}}</h5><br>{{c.Item2}}</li>
+						<li data-tab="#3" class="tab-btn active-btn"><h5>{{c.H3}}</h5><br>{{c.Item3}}</li>
+						<li data-tab="#4" class="tab-btn"><h5>{{c.H4}}</h5><br>{{c.Item4}}</li>
+						<li data-tab="#5" class="tab-btn"><h5>{{c.H5}}</h5><br>{{c.Item5}}</li>
+					</ul>
+
+					<!--Tabs Container-->
+					<div class="tabs-content">
+
+						<!--Tab / Active Tab-->
+						<div class="tab" id="1">
+							<div class="content">
+								<h4>{{c.Item1_H}}</h4>
+								<div class="text">{{c.Item1_T}}</div>
+								<div class="btn-box text-center">
+									<a href="{% url c.Item1_REF %}" class="theme-btn btn-style-three"><span class="txt">{{c.Item1_B}}</span></a>
+								</div>
+							</div>
+						</div>
+
+						<!--Tab / Active Tab-->
+						<div class="tab" id="2">
+							<div class="content">
+								<h4>{{c.Item2_H}}</h4>
+								<div class="text">{{c.Item2_T}}</div>
+								<div class="btn-box text-center">
+									<a href="{% url c.Item2_REF %}" class="theme-btn btn-style-three"><span class="txt">{{c.Item2_B}}</span></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab" id="3">
+							<div class="content">
+								<h4>{{c.Item3_H}}</h4>
+								<div class="text">{{c.Item3_T}}</div>
+								<div class="btn-box text-center">
+									<a href="{% url c.Item3_REF %}" class="theme-btn btn-style-three"><span class="txt">{{c.Item3_B}}</span></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab" id="4">
+							<div class="content">
+								<h4>{{c.Item4_H}}</h4>
+								<div class="text">{{c.Item4_T}}</div>
+								<div class="btn-box text-center">
+									<a href="{% url c.Item4_REF %}" class="theme-btn btn-style-three"><span class="txt">{{c.Item4_B}}</span></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="tab" id="5">
+							<div class="content">
+								<h4>{{c.Item5_H}}</h4>
+								<div class="text">{{c.Item5_T}}</div>
+								<div class="btn-box text-center">
+									<a href="{% url c.Item5_REF %}" class="theme-btn btn-style-three"><span class="txt">{{c.Item5_B}}</span></a>
+								</div>
+							</div>
+						</div>
+
+
+
+
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>

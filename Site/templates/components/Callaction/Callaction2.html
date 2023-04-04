@@ -1,0 +1,15 @@
+<section class="call-to-action-section-two">
+		<div class="auto-container">
+
+			<div class="inner-container">
+				<div class="image">
+					<img src="{{ MEDIA_URL }}{{c.c3}}" alt="" />
+				</div>
+				<h3>{{c.c1}}</h3>
+				{% if c.c2 != '' %}
+				<a href="{% url c.c4 %}" class="theme-btn btn-style-two"><span class="txt">{{c.c2|linebreaks}}</span></a>
+				{% endif %}
+			</div>
+		</div>
+
+	</section>

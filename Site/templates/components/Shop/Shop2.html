@@ -1,0 +1,52 @@
+{% load static %}
+
+<section>
+ <div class="auto-container">
+    <div class="row clearfix">
+        <div class="image-column col-lg-7 col-md-12 col-sm-12">
+            <img src="{{ MEDIA_URL }}{{c.IMG}}" style="margin-right:{{c.MARGIN}}px">
+        </div>
+        <div class="info-column col-lg-5 col-md-12 col-sm-12">
+            <div class="details-header">
+                <h2>{{c.Title}} </h2>
+                <div class="rating" dir="ltr">
+                    {% for i in '12345'|make_list %}
+                    {% if i > c.STAR %}
+                    <span class="fa fa-star-o">
+                    {% else %}
+                    <span class="fa fa-star">
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="item-price">{{c.PRICE}}</div>
+            </div>
+
+            <div class="text">
+                <h6 class="justify">{{c.TEXT|linebreaks}} </h6>
+            </div>
+
+            <div class="other-options">
+                <div class="clearfix">
+
+                    <div class="pull-left">
+                        <!--Btns Box-->
+                        <div class="btns-box">
+                            <button type="button" class="theme-btn btn-style-three"><span
+                                    class="txt">{{c.B1}}</span></button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <ul class="shop-list">
+                <li><strong>{{c.Item1}}:</strong><span class="theme_color"></span>{{c.Value1}}</li>
+                <li><strong>{{c.Item2}}:</strong><span class="theme_color"></span>{{c.Value2}}</li>
+                <li><strong>{{c.Item3}}:</strong><span class="theme_color"></span>{{c.Value3}}</li>
+
+            </ul>
+
+        </div>
+    </div>
+ </div>
+</section>

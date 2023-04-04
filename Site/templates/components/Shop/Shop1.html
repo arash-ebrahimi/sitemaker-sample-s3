@@ -1,0 +1,55 @@
+{% load static %}
+
+<section class="shop-single-section">
+    <div class="auto-container">
+
+        <div class="shop-page product-details">
+
+
+            <div class="product-info-tabs">
+                <!--Product Tabs-->
+                <div class="prod-tabs tabs-box">
+
+                    <!--Tab Btns-->
+                    <ul class="tab-btns tab-buttons clearfix">
+                        <li data-tab="#1" class="tab-btn active-btn">{{c.Title1}}</li>
+                        <li data-tab="#2" class="tab-btn">{{c.Title2}}</li>
+                        <li data-tab="#3" class="tab-btn">{{c.Title3}}</li>
+                    </ul>
+
+                    <!--Tabs Container-->
+                    <div class="tabs-content">
+
+                        <!--Tab / Active Tab-->
+                        <div class="tab active-tab" id="1">
+                            <div class="content">
+                                <h6 class="justify">{{c.Text1|linebreaks}}</h6>
+                            </div>
+                        </div>
+
+                        <!--Tab / Active Tab-->
+                        <div class="tab" id="2">
+                            <div class="content">
+                                <h6 class="justify">{{c.Text2|linebreaks}} </h6>
+                            </div>
+                        </div>
+
+                        <!--Tab-->
+                        <div class="tab" id="3">
+                            <div class="content">
+                                <h6 class="justify">{{c.Text3|linebreaks}} </h6>
+                            </div>
+
+                        </div>
+                        <!--End Tab-->
+
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+</section>

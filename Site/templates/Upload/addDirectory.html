@@ -1,0 +1,31 @@
+{%  extends 'Upload/home.html' %}
+{% block content %}
+{% load static %}
+<br>
+<br>
+<br>
+
+
+
+<form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+
+        <p class="mg-b-10">به پوشه   <span style="color:red">{{name}}</span>  پوشه ای به نام زیر اضافه می شود:</p>
+        <input type="text" class="form-control" id ="adddirectory" name="adddirectory" placeholder="نام پوشه جدید">
+    </div>
+    <div style="text-align:center">
+        <button name="add" class="btn ripple btn-primary mt-3">اضافه شود</button>
+        <button name="cancel" class="btn ripple btn-danger mt-3">انصراف</button>
+    </div>
+</form>
+
+<script src="{% static 'Dashboard/plugins/jquery/jquery.min.js' %}">
+</script>
+<script>
+    var input = document.getElementById("adddirectory");
+    input.focus();
+
+</script>
+
+{% endblock %}
